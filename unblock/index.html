@@ -1,0 +1,21 @@
+<body>
+	<link rel="stylesheet" href="style.css">
+		<h1>School Smarts</h1>
+ 	  <title>School Smarts | Unblocker</title>
+  <div class="form-container">
+    <form>
+      <input type="text" placeholder="Enter a URL">
+      <button type="submit">Go</button>
+    </form>
+  </div>
+	<script>
+		const form = document.querySelector('form');
+
+form.addEventListener('submit', function(event) {
+  event.preventDefault();
+  const url = this.querySelector('input').value;
+  const googleUrl = `http://webcache.googleusercontent.com/search?q=cache:${url}`;
+  window.location.href = googleUrl;
+});
+	</script>
+</body>
