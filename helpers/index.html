@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>School Smarts | Helpers</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+		<h1>School Smarts</h1>
+    <h1>Cheats</h1>
+    <div class="button-container">
+      <a href="quizziz/" class="button">Quizziz Helper</a>
+      <a href="mathia/" class="button">Mathia Helper</a>
+    </div>
+  </body>
+<button id="backButton" style="position: fixed; bottom: 10px; left: 10px; background-color: #8a6cb7; color: #fff; padding: 10px 15px; border-radius: 30px; text-decoration: none; font-size: 16px; transition: all 0.2s ease-out;" onclick="goBack()">Back</button>
+<script>
+  const button = document.getElementById("backButton");
+
+  function updateButtonPosition() {
+    const distanceFromBottom = window.innerHeight - button.getBoundingClientRect().bottom - 1000; // subtract 10px for padding
+    const distanceFromLeft = button.getBoundingClientRect().left;
+    button.style.transform = `translateY(${distanceFromBottom}px) translateX(${distanceFromLeft - 10}px)`;
+  }
+
+  window.addEventListener("scroll", function() {
+    updateButtonPosition();
+  });
+
+  window.addEventListener("resize", function() {
+    updateButtonPosition();
+  });
+
+  updateButtonPosition();
+  
+  function goBack() {
+    window.history.back();
+  }
+</script>
